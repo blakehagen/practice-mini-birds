@@ -5,6 +5,23 @@ var mongojs = require('mongojs');
 
 var app = express();
 
+
+// // // // //
+var Bird = require('./birdsModel');
+
+Bird.find({}, function (err, response) {
+})
+
+var newBird = new Bird({
+    color: "green"
+    //etc.
+});
+
+newBird.save(function(err, result){
+    
+})
+
+// // // // //
 app.use(bodyParser.json());
 app.use(cors());
 
